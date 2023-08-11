@@ -6,6 +6,9 @@ const userRoutes = require('./routes/userRoutes')
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
+const cors = require('cors');
+const { get } = require("mongoose");
+
 
 dotenv.config();
 connectDB();
@@ -13,7 +16,7 @@ connectDB();
 const app = express();
 app.use(express.json()); 
 app.get("/",(req,res)=>{
-    res.send("API running")
+    res.json("API running")
 
 })
 app.use("/api/user", userRoutes);
@@ -21,10 +24,7 @@ app.use("/api/chat", chatRoutes);
 app.use("/api/message", messageRoutes);
 
 
-// app.get("/api/chat/:id",(req,res)=>{
-//    const singleChat = chats.find((c)=>c._id == req.params.id)
-// res.send(singleChat)
-// })
+
 
 
 app.use(notFound);
@@ -35,6 +35,7 @@ const PORT = process.env.PORT || 5000
 const server = app.listen(
     PORT,
     console.log(`Server running  PORT ${PORT}...`)
+    
   );
   const io = require("socket.io")(server, {
     pingTimeout: 60000,
