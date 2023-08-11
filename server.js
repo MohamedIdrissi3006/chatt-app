@@ -14,6 +14,13 @@ dotenv.config();
 connectDB();
 
 const app = express();
+app.use(cors(
+{
+  origin:["https://chatt-app-z45r.vercel.app"],
+  methods:["GET","POST"],
+  credentials:true
+}
+))
 app.use(express.json()); 
 app.get("/",(req,res)=>{
     res.json("API running")
