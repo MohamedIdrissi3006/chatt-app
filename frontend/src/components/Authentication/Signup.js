@@ -103,7 +103,7 @@ const Signup = () => {
             },
           };
           const { data } = await axios.post(
-            "/api/user",
+            "https://chatt-app-theta.vercel.app/api/user",
             {
               name,
               email,
