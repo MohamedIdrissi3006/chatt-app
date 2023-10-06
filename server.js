@@ -16,7 +16,7 @@ connectDB();
 const app = express();
 app.use(cors(
 {
-  origin:["https://chatt-app-z45r.vercel.app"],
+  origin:["https://chatt-app-frontend.vercel.app/"],
   methods:["GET","POST"],
   credentials:true
 }
