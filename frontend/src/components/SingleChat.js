@@ -69,7 +69,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 };
                 setNewMessage("");
                 const { data } = await axios.post(
-                    "/api/message",
+                    "https://chatt-app-theta.vercel.app/api/message",
                     {
                         content: newMessage,
                         chatId: selectedChat,
@@ -106,7 +106,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             setLoading(true);
             console.log(selectedChat._id)
             const { data } = await axios.get(
-                `/api/message/${selectedChat._id}`,
+                `https://chatt-app-theta.vercel.app/api/message/${selectedChat._id}`,
                 config
             );
 
