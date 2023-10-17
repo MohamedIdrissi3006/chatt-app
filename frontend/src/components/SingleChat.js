@@ -18,7 +18,7 @@ import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 
 
 import io from "socket.io-client";
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "https://chatt-app-theta.vercel.app";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
