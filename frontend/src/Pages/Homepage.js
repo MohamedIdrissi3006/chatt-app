@@ -26,14 +26,14 @@ const Homepage = () => {
 
 
   return (
-    <Container maxW="xl" centerContent>
+    <Container maxW="xxl" centerContent>
       <Box
         d="flex"
         justifyContent="center"
         p={3}
         bg="white"
         w="100%"
-        m="40px 0 15px 0"
+        m="40px 0 40px 0"
         borderRadius="lg"
         borderWidth="1px"
       >
@@ -41,7 +41,7 @@ const Homepage = () => {
           Talk-A-Tive
         </Text>
       </Box>
-      <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
+      <Box  w="40%" p={7} borderRadius="lg" borderWidth="1px">
         <Tabs isFitted variant="soft-rounded">
           <TabList mb="1em">
             <Tab>Login</Tab>
