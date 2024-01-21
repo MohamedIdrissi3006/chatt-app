@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "proxy": "https://chatt-app-theta.vercel.app",
+  "proxy": "https://chatt-app-qm7l.vercel.app",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
