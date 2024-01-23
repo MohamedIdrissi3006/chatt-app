@@ -40,7 +40,7 @@ const Login = () => {
       };
 
       const { data } = await axios.post(
-        "https://chatt-app-theta.vercel.app/api/user/login",
+        "https://chatt-app-qm7l.vercel.app/api/user/login",
         { email, password },
         config
       );
